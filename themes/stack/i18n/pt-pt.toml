@@ -49,6 +49,3 @@ darkMode   = "Modo Escuro"
     placeholder = "Escreva algo..."
     resultTitle = "#PAGES_COUNT páginas (#TIME_SECONDS segundos)"
 
-[footer]
-    builtWith  = "Criado com {{ .Generator }}"
-    designedBy = "Tema {{ .Theme }} desenvolvido por {{ .DesignedBy }}"
