@@ -1,0 +1,14 @@
+# Hugo build output
+public/
+resources/_gen/
+
+# Node (PostCSS / Autoprefixer)
+node_modules/
+package-lock.json
+
+# macOS
+.DS_Store
+
+# IDE
+.vscode/
+.idea/

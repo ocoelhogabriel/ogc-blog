@@ -1,0 +1,37 @@
+name: Deploy Hugo to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout código-fonte
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive # Baixa o tema Stack como submódulo
+          fetch-depth: 0 # Necessário para lastmod correto
+
+      - name: Configurar Hugo Extended
+        uses: peaceiris/actions-hugo@v3
+        with:
+          hugo-version: "latest"
+          extended: true # Stack requer suporte a SCSS/PostCSS
+
+      - name: Build com minificação
+        run: hugo --minify
+
+      - name: Deploy para gh-pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          publish_branch: gh-pages
+          commit_message: "Deploy: ${{ github.event.head_commit.message }}"

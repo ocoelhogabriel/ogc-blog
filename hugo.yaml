@@ -1,0 +1,18 @@
+baseURL: "https://ocoelhogabriel.github.io/"
+languageCode: "pt-br"
+title: "Dev Log | Gabriel Coelho"
+defaultContentLanguage: "pt-br"
+hasCJKLanguage: false
+
+# Tema instalado como submódulo em themes/stack
+theme: "stack"
+
+# Tamanho do sumário nos cards da homepage (em palavras)
+summaryLength: 70
+
+pagination:
+  pagerSize: 5
+
+permalinks:
+  post: "/p/:slug/"
+  page: "/:slug/"
