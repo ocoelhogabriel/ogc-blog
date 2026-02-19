@@ -17,7 +17,7 @@ languages:
   en:
     languageName: "English"
     languageCode: "en-us"
-    title: "Dev Log | Portfolio"
+    title: "Dev Log | Gabriel Coelho"
     weight: 2
     params:
       sidebar:
