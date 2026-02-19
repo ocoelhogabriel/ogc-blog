@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Pages on Dev Log | Gabriel Coelho</title><link>https://ocoelhogabriel.github.io/page/</link><description>Recent content in Pages on Dev Log | Gabriel Coelho</description><generator>Hugo -- gohugo.io</generator><language>pt-br</language><lastBuildDate>Thu, 19 Feb 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://ocoelhogabriel.github.io/page/index.xml" rel="self" type="application/rss+xml"/><item><title>Sobre Mim</title><link>https://ocoelhogabriel.github.io/about/</link><pubDate>Thu, 19 Feb 2026 00:00:00 +0000</pubDate><guid>https://ocoelhogabriel.github.io/about/</guid><description>&lt;p&gt;Olá! Sou &lt;strong&gt;Gabriel Coelho&lt;/strong&gt;, Engenheiro de Software com foco no ecossistema &lt;strong&gt;Java / Spring Framework&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2 id="trajetória"&gt;&lt;a href="#trajet%c3%b3ria" class="header-anchor"&gt;&lt;/a&gt;Trajetória
+&lt;/h2&gt;&lt;p&gt;Trabalho com desenvolvimento de software há alguns anos, com experiência em:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Back-end Java&lt;/strong&gt;: Spring Boot, Spring Data JPA, Spring Security, Spring Cloud&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Arquitetura&lt;/strong&gt;: APIs RESTful, microsserviços, Design Patterns (Clean Architecture, DDD)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dados&lt;/strong&gt;: JPA/Hibernate, PostgreSQL, MySQL, Redis&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DevOps&lt;/strong&gt;: Docker, CI/CD, GitHub Actions, Linux&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Boas Práticas&lt;/strong&gt;: TDD, Clean Code, Code Review&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="este-blog"&gt;&lt;a href="#este-blog" class="header-anchor"&gt;&lt;/a&gt;Este Blog
+&lt;/h2&gt;&lt;p&gt;O &lt;strong&gt;Dev Log&lt;/strong&gt; é o meu espaço para documentar estudos, experimentos e aprendizados do dia a dia de um engenheiro Java. Aqui você encontrará:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;→ Artigos técnicos sobre Spring Framework e ecossistema Java&lt;/li&gt;
+&lt;li&gt;→ Notas sobre patterns de arquitetura&lt;/li&gt;
+&lt;li&gt;→ Dicas práticas de performance e boas práticas&lt;/li&gt;
+&lt;li&gt;→ Resumos de livros e cursos&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id="contato"&gt;&lt;a href="#contato" class="header-anchor"&gt;&lt;/a&gt;Contato
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;💻 &lt;a class="link" href="https://github.com/ocoelhogabriel" target="_blank" rel="noopener"
+ &gt;GitHub&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;💼 &lt;a class="link" href="https://linkedin.com/in/ocoelhogabriel" target="_blank" rel="noopener"
+ &gt;LinkedIn&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description></item><item><title>Artigos</title><link>https://ocoelhogabriel.github.io/archives/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ocoelhogabriel.github.io/archives/</guid><description/></item><item><title>Busca</title><link>https://ocoelhogabriel.github.io/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://ocoelhogabriel.github.io/search/</guid><description/></item></channel></rss>
