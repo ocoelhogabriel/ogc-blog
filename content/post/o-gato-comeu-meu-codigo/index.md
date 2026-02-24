@@ -3,13 +3,12 @@ title: "O Programador Prático: O gato comeu meu código - Administrando seu Rep
 description: "Quando inventamos desculpas para nossos erros, perdemos a oportunidade de aprender e evoluir."
 date: 2026-02-23
 draft: false
-slug: o-programador-pratico-o-gato-comeu-meu-codigo
+slug: o-gato-comeu-meu-codigo
 categories:
   - livros
 tags:
-  - projetos
-  - livros
-  - git
+  - o-programador-pratico
+  - responsabilidade
 image: cover.jpg
 ---
 
