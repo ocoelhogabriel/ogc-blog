@@ -1,142 +1,68 @@
 ---
-title: "Spring Boot do Zero: Criando sua Primeira API REST"
-description: "Um guia prático para criar uma API REST com Spring Boot, validação de dados e tratamento de erros."
-date: 2026-02-19
-slug: spring-boot-api-rest
-categories:
-  - Spring Framework
-tags:
-  - java
-  - spring-boot
-  - api-rest
-  - tutorial
-image: cover.jpg
+title: "O Programador Prático: O gato comeu meu código - Administrando seu Repositório"
+description: "Quando inventamos desculpas para nossos erros, perdemos a oportunidade de aprender e evoluir."
+date: 2026-02-23
 draft: false
+slug: o-programador-pratico-o-gato-comeu-meu-codigo
+categories:
+  - livros
+tags:
+  - projetos
+  - livros
+  - git
+image: cover.jpg
 ---
 
-## O que vamos construir
+![Gato programador ou ambiente de caos tecnológico](https://cdn.pixabay.com/photo/2015/09/29/13/47/cat-963931_1280.jpg)
 
-Neste artigo vamos criar uma API REST completa com **Spring Boot 3**, incluindo:
+Todos nós já passamos por isso. O prazo está estourando, um bug crítico aparece no ambiente de staging ou o banco de dados corrompe. A reação instintiva de muita gente é procurar um culpado: "O fornecedor atrasou", "A biblioteca está com bug", ou a clássica desculpa escolar adaptada para o backend: **"O gato comeu meu código-fonte"**.
 
-- Endpoints CRUD para um recurso `Produto`
-- Validação de dados com Bean Validation
-- Tratamento global de erros com `@ControllerAdvice`
-- Paginação de resultados
+No entanto, a diferença entre um desenvolvedor comum e um **Programador Pragmático** começa exatamente aqui: na postura técnica em relação à responsabilidade.
 
-## Dependências
+## A Responsabilidade é uma Escolha Ativa
 
-No `pom.xml`, adicione:
+No desenvolvimento de software, a responsabilidade é algo que você assume ativamente. Quando você aceita uma task, define uma arquitetura ou sobe um serviço em Spring Boot, você está se comprometendo a entregar aquilo funcionando.
 
-```xml
-<dependencies>
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-validation</artifactId>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-data-jpa</artifactId>
-    </dependency>
-</dependencies>
-```
+O ponto chave do item 1.1 do livro não é sobre ter controle total sobre o universo (sabemos que o hardware falha e o Wi-Fi cai), mas sobre como lidamos com as falhas quando elas inevitavelmente ocorrem. Um programador pragmático não tenta esconder seus erros sob o tapete ou ignorar o débito técnico. Ele é honesto, direto e focado na solução.
 
-## Modelo de Domínio
+## O Teste do Gato (ou do Pato de Borracha)
 
-```java
-@Entity
-@Table(name = "produtos")
-public class Produto {
+Quando algo dá errado, o instinto de defesa nos faz criar justificativas. Antes de correr para o seu tech lead e dizer que a culpa é do servidor, os autores Andrew Hunt e David Thomas sugerem um exercício mental simples:
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+> _"Antes de abordar alguém para dizer por que algo não pode ser feito, pare e escute a si próprio. Converse com o pato de borracha no seu monitor ou com o gato. Sua desculpa parece convincente ou soa como amadorismo?"_
 
-    @NotBlank(message = "Nome é obrigatório")
-    @Size(min = 3, max = 100)
-    private String nome;
+Se o seu código sumiu porque você não deu push, a falha não é da máquina. A responsabilidade técnica era ter um fluxo de trabalho seguro. Se você não tinha um plano de contingência para um risco que sabia que existia, a falha é sua.
 
-    @NotNull
-    @Positive(message = "Preço deve ser positivo")
-    private BigDecimal preco;
+## Ofereça Opções, Não Desculpas
 
-    // getters e setters omitidos
-}
-```
+A lição mais valiosa aqui é a mudança de mentalidade de "dar desculpas" para "fornecer opções".
 
-## Controller REST
+Um programador pragmático analisa o incidente e apresenta soluções alternativas. Em vez de apenas dizer que "o código não está pronto", tente:
 
-```java
-@RestController
-@RequestMapping("/api/produtos")
-@Validated
-public class ProdutoController {
+- "Não vamos entregar a funcionalidade completa hoje, mas podemos subir o MVP com os endpoints X e Y e finalizar o Z amanhã."
+- "O servidor caiu, mas o backup de ontem está íntegro e consigo restaurar em 2 horas."
+- "Tivemos um conflito de merge complexo; se eu focar nisso agora com ajuda do Fulano, resolvemos até o final do dia."
 
-    private final ProdutoService service;
+Ao fazer isso, você tira o foco da falha e coloca na resolução, demonstrando controle sobre o projeto.
 
-    public ProdutoController(ProdutoService service) {
-        this.service = service;
-    }
+![Ambiente de trabalho organizado](https://cdn.pixabay.com/photo/2016/11/19/15/32/laptop-1839876_1280.jpg)
 
-    @GetMapping
-    public Page<ProdutoDTO> listar(Pageable pageable) {
-        return service.listarTodos(pageable);
-    }
+## Caso Real: Quando o gato realmente "comeu" meu código
 
-    @GetMapping("/{id}")
-    public ResponseEntity<ProdutoDTO> buscar(@PathVariable Long id) {
-        return ResponseEntity.ok(service.buscarPorId(id));
-    }
+Já vivi exatamente essa situação. Em um projeto que eu era o único responsável por desenvolver um produto novo do zero, acabei perdendo todo o trabalho realizado até aquele momento.
 
-    @PostMapping
-    @ResponseStatus(HttpStatus.CREATED)
-    public ProdutoDTO criar(@RequestBody @Valid ProdutoCriarDTO dto) {
-        return service.criar(dto);
-    }
-}
-```
+Eu já tinha feito o estudo técnico, analisado as documentações e boa parte das funcionalidades principais já estava rodando em uma primeira versão de testes. O que eu perdi não foi apenas a correção de um bug simples, mas implementações prontas, testes validados e regras de negócio complexas que haviam sido ajustadas especificamente para o cenário da empresa.
 
-## Tratamento de Erros Global
+**E o que eu fiz? Sentei no chão e chorei?** Não.
 
-```java
-@RestControllerAdvice
-public class GlobalExceptionHandler {
+Fui direto ao meu líder e joguei limpo: expliquei que havia perdido as alterações em meio aos commits e que precisaria refazer o trabalho. Como o raciocínio estava fresco na memória e a arquitetura já estava definida, só disse ao meu lider que eu resolveria, e sentei para codar novamente. O resultado? O código saiu muito melhor do que estava antes, mais limpo e performático.
 
-    @ExceptionHandler(MethodArgumentNotValidException.class)
-    @ResponseStatus(HttpStatus.BAD_REQUEST)
-    public Map<String, String> handleValidation(MethodArgumentNotValidException ex) {
-        Map<String, String> erros = new HashMap<>();
-        ex.getBindingResult().getFieldErrors().forEach(err ->
-            erros.put(err.getField(), err.getDefaultMessage())
-        );
-        return erros;
-    }
+Hoje, meu workflow mudou. Mesmo que seja um ajuste pequeno em uma propriedade do projeto, eu dou o commit. Tenho em mente que meu trabalho só está seguro quando está no repositório.
 
-    @ExceptionHandler(EntityNotFoundException.class)
-    @ResponseStatus(HttpStatus.NOT_FOUND)
-    public Map<String, String> handleNotFound(EntityNotFoundException ex) {
-        return Map.of("erro", ex.getMessage());
-    }
-}
-```
+## Conclusão: Confiança se Constrói com Honestidade
 
-## Testando com cURL
+Assumir a responsabilidade pelas falhas não é sinal de fraqueza; é sinal de senioridade. Quando seus colegas sabem que você não vai tentar enganá-los com desculpas criativas, eles passam a confiar no seu julgamento técnico.
 
-```bash
-# Criar produto
-curl -X POST http://localhost:8080/api/produtos \
-  -H "Content-Type: application/json" \
-  -d '{"nome": "Notebook", "preco": 4999.99}'
+Na próxima vez que algo der errado — e vai dar —, deixe o gato em paz. Respire fundo, avalie os danos, prepare opções viáveis e assuma o controle do seu código.
 
-# Listar com paginação
-curl "http://localhost:8080/api/produtos?page=0&size=10&sort=nome"
-```
-
-## Próximos Passos
-
-- Adicionar autenticação com **Spring Security + JWT**
-- Implementar cache com **Spring Cache + Redis**
-- Escrever testes de integração com **@SpringBootTest**
+---
