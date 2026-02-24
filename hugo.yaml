@@ -14,7 +14,7 @@ languages:
     weight: 1
     params:
       sidebar:
-        subtitle: "Engenheiro de Software | Especialista em Spring Framework"
+        subtitle: "Engenheiro de Software | Spring Framework"
   en:
     languageName: "English"
     languageCode: "en-us"
@@ -22,7 +22,7 @@ languages:
     weight: 2
     params:
       sidebar:
-        subtitle: "Software Engineer | Spring Framework Specialist"
+        subtitle: "Software Engineer | Spring Framework"
 
 # Tema instalado como submódulo em themes/stack
 theme: "stack"
