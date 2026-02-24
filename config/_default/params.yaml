@@ -48,4 +48,8 @@ imageProcessing:
     enabled: true
 
 comments:
-  enabled: false
+  enabled: true
+  provider: "disqus"
+
+  disqusjs:
+    shortname: "ocoelhogabriel-ogc-blog"
