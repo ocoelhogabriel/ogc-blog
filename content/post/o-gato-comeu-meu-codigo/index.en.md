@@ -1,7 +1,7 @@
 ---
 title: "The Pragmatic Programmer: The cat ate my source code - Managing your Repository"
 description: "When we make up excuses for our mistakes, we lose the opportunity to learn and evolve."
-date: 2026-02-23
+date: 2026-02-24
 draft: false
 slug: the-cat-ate-my-source-code
 categories:
@@ -48,7 +48,7 @@ By doing this, you take the focus off the failure and put it on the resolution, 
 
 ## Real Case: When the cat actually "ate" my code
 
-I have experienced this exact situation. On a project where I was solely responsible for developing a new product from scratch, I ended up losing all the work done up to that point.
+I have experienced this exact situation. On a project where I was solely responsible for developing a new product from scratch, I ended up losing a part of everything I had done up to that point.
 
 I had already done the technical study, analyzed the documentation, and a large part of the main features was already running in a first test version. What I lost was not just a simple bug fix, but ready implementations, validated tests, and complex business rules that had been tailored specifically for the company's scenario.
 
@@ -56,7 +56,7 @@ I had already done the technical study, analyzed the documentation, and a large 
 
 I went straight to my leader and played clean: I explained that I had lost the changes amid the commits and that I would need to redo the work. Since the reasoning was fresh in my memory and the architecture was already defined, I just told my leader that I would solve it, and sat down to code again. The result? The code came out much better than it was before, cleaner and more performant.
 
-Today, my workflow has changed. Even if it is a small adjustment to a project property, I commit it. I keep in mind that my work is only safe when it is in the repository.
+Today, my workflow has changed. Even if it is a small adjustment to a project property, I make the commit. I keep in mind that my work is only safe when it is in the repository.
 
 ## Conclusion: Trust is Built with Honesty
 

@@ -1,7 +1,7 @@
 ---
 title: "O Programador Prático: O gato comeu meu código - Administrando seu Repositório"
 description: "Quando inventamos desculpas para nossos erros, perdemos a oportunidade de aprender e evoluir."
-date: 2026-02-23
+date: 2026-02-24
 draft: false
 slug: o-gato-comeu-meu-codigo
 categories:
