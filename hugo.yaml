@@ -4,6 +4,7 @@ baseURL: "https://ocoelhogabriel.github.io/ogc-blog/"
 defaultContentLanguage: "pt-br"
 defaultContentLanguageInSubdir: false # O idioma padrão fica na raiz, outros em /en/, etc.
 hasCJKLanguage: false
+disqusShortname: "ocoelhogabriel-ogc-blog"
 
 languages:
   pt-br:
