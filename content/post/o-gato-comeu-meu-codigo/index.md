@@ -48,7 +48,7 @@ Ao fazer isso, você tira o foco da falha e coloca na resolução, demonstrando 
 
 ## Caso Real: Quando o gato realmente "comeu" meu código
 
-Já vivi exatamente essa situação. Em um projeto que eu era o único responsável por desenvolver um produto novo do zero, acabei perdendo todo o trabalho realizado até aquele momento.
+Já vivi exatamente essa situação. Em um projeto que eu era o único responsável por desenvolver um produto novo do zero, acabei perdendo uma parte de tudo o que tinha feito até aquele momento.
 
 Eu já tinha feito o estudo técnico, analisado as documentações e boa parte das funcionalidades principais já estava rodando em uma primeira versão de testes. O que eu perdi não foi apenas a correção de um bug simples, mas implementações prontas, testes validados e regras de negócio complexas que haviam sido ajustadas especificamente para o cenário da empresa.
 
@@ -56,7 +56,7 @@ Eu já tinha feito o estudo técnico, analisado as documentações e boa parte d
 
 Fui direto ao meu líder e joguei limpo: expliquei que havia perdido as alterações em meio aos commits e que precisaria refazer o trabalho. Como o raciocínio estava fresco na memória e a arquitetura já estava definida, só disse ao meu lider que eu resolveria, e sentei para codar novamente. O resultado? O código saiu muito melhor do que estava antes, mais limpo e performático.
 
-Hoje, meu workflow mudou. Mesmo que seja um ajuste pequeno em uma propriedade do projeto, eu dou o commit. Tenho em mente que meu trabalho só está seguro quando está no repositório.
+Hoje, meu workflow mudou. Mesmo que seja um ajuste pequeno em uma propriedade do projeto, eu realizo o commit. Tenho em mente que meu trabalho só está seguro quando está no repositório.
 
 ## Conclusão: Confiança se Constrói com Honestidade
 
