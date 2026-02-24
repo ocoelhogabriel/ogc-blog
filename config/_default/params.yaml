@@ -48,4 +48,20 @@ imageProcessing:
     enabled: true
 
 comments:
-  enabled: false
+  enabled: true
+  provider: "giscus"
+
+  giscus:
+    repo: "ocoelhogabriel/ogc-blog"
+    repoID: ""
+    category: "Announcements"
+    categoryID: ""
+    mapping: "title"
+    lightTheme: "light"
+    darkTheme: "dark_dimmed"
+    reactionsEnabled: "1"
+    emitMetadata: "0"
+    inputPosition: "top"
+    lang: "pt"
+    strict: "0"
+    loading: "lazy"
